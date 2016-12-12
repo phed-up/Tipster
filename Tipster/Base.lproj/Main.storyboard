@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tipster" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,189 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTp-sU-YD6">
+                                <rect key="frame" x="114" y="40" width="146" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="8b2-QQ-x8m"/>
+                                    <constraint firstAttribute="width" constant="146" id="S0N-cb-yfe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kie-Bv-mGV">
+                                <rect key="frame" x="157" y="199.5" width="60" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cgj-P0-0kD">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+                                        <color key="backgroundColor" white="0.57039114930000001" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Amazing"/>
+                                        <connections>
+                                            <action selector="amazingServiceBtnWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rNZ-9S-2l3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJL-16-v6m">
+                                        <rect key="frame" x="0.0" y="40" width="60" height="30"/>
+                                        <color key="backgroundColor" white="0.57039114930000001" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Neutral"/>
+                                        <connections>
+                                            <action selector="neutralServiceBtnWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VGa-ul-H9U"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taX-CY-V4p">
+                                        <rect key="frame" x="0.0" y="80" width="60" height="30"/>
+                                        <color key="backgroundColor" white="0.57039114930000001" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Rude"/>
+                                        <connections>
+                                            <action selector="rudeServiceBtnWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4BM-Kp-F59"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter amount of bill" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6o6-EL-Y5c">
+                                <rect key="frame" x="75" y="89" width="224" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="224" id="8um-H9-Ukn"/>
+                                    <constraint firstAttribute="height" constant="30" id="Xik-t1-J0m"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Service" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bf3-Kk-Zjj">
+                                <rect key="frame" x="140" y="171" width="94" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BN1-M1-4Ji">
+                                <rect key="frame" x="157" y="374" width="60" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RI8-Su-9kw">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+                                        <color key="backgroundColor" white="0.57039114930000001" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="Delicious"/>
+                                        <connections>
+                                            <action selector="foodDeliciousBtnWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WR0-hP-ZRc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zj-u3-Z2L">
+                                        <rect key="frame" x="0.0" y="40" width="60" height="30"/>
+                                        <color key="backgroundColor" white="0.57039114930000001" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Neutral"/>
+                                        <connections>
+                                            <action selector="foodNeutralBtnWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A2I-m7-hoF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sz5-Wu-KvB">
+                                        <rect key="frame" x="0.0" y="80" width="60" height="30"/>
+                                        <color key="backgroundColor" white="0.57039114930000001" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Terrible"/>
+                                        <connections>
+                                            <action selector="terribleFoodBenWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I7Q-9x-KCk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="gJ4-Uw-XiK"/>
+                                    <constraint firstAttribute="height" constant="110" id="u2u-X3-S9f"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Food Quality" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lf8-qs-I4O">
+                                <rect key="frame" x="116" y="345" width="144" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="144" id="hoc-O3-dcs"/>
+                                    <constraint firstAttribute="height" constant="21" id="ygr-iJ-uVg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eDC-3H-pvP">
+                                <rect key="frame" x="155" y="537" width="60" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYE-4j-ctV">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+                                        <color key="backgroundColor" white="0.57039114930000001" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Fast"/>
+                                        <connections>
+                                            <action selector="fastSpeedBtnWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UHp-sO-ZCr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8o-0x-rSq">
+                                        <rect key="frame" x="0.0" y="40" width="60" height="30"/>
+                                        <color key="backgroundColor" white="0.57039114930000001" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Neutral"/>
+                                        <connections>
+                                            <action selector="neutralSpeedBenWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F4l-cU-Yj8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIb-qY-C1g">
+                                        <rect key="frame" x="0.0" y="80" width="60" height="30"/>
+                                        <color key="backgroundColor" white="0.57039114930000001" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Slow"/>
+                                        <connections>
+                                            <action selector="slowSpeedBtnWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="21m-yE-SXU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="g4l-2Y-4Ir"/>
+                                    <constraint firstAttribute="width" constant="60" id="tlq-cr-QcR"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbh-6F-Fpj">
+                                <rect key="frame" x="114" y="508" width="144" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="144" id="h9X-4N-rc2"/>
+                                    <constraint firstAttribute="height" constant="21" id="qer-fs-CSg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOZ-G6-I9N">
+                                <rect key="frame" x="85" y="199" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wlx-ZE-IDe"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eDC-3H-pvP" firstAttribute="centerX" secondItem="jbh-6F-Fpj" secondAttribute="centerX" id="2a1-gK-kh0"/>
+                            <constraint firstItem="eDC-3H-pvP" firstAttribute="top" secondItem="jbh-6F-Fpj" secondAttribute="bottom" constant="8" id="2ux-9j-8d7"/>
+                            <constraint firstItem="eDC-3H-pvP" firstAttribute="top" secondItem="jbh-6F-Fpj" secondAttribute="bottom" constant="8" id="3De-Is-a24"/>
+                            <constraint firstItem="Bf3-Kk-Zjj" firstAttribute="centerX" secondItem="Cgj-P0-0kD" secondAttribute="centerX" id="5Zg-jc-xAm"/>
+                            <constraint firstItem="jbh-6F-Fpj" firstAttribute="centerX" secondItem="Sz5-Wu-KvB" secondAttribute="centerX" id="6c2-ae-C0w"/>
+                            <constraint firstItem="Bf3-Kk-Zjj" firstAttribute="top" secondItem="6o6-EL-Y5c" secondAttribute="bottom" constant="52" id="Lhy-9S-0sp"/>
+                            <constraint firstItem="kie-Bv-mGV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N1n-vy-GYQ"/>
+                            <constraint firstItem="BN1-M1-4Ji" firstAttribute="top" secondItem="Lf8-qs-I4O" secondAttribute="bottom" constant="8" id="TLz-PB-S40"/>
+                            <constraint firstItem="6o6-EL-Y5c" firstAttribute="top" secondItem="qTp-sU-YD6" secondAttribute="bottom" constant="28" id="WeO-QY-cV9"/>
+                            <constraint firstItem="jbh-6F-Fpj" firstAttribute="top" secondItem="BN1-M1-4Ji" secondAttribute="bottom" constant="30" id="WkC-j1-v4G"/>
+                            <constraint firstItem="BN1-M1-4Ji" firstAttribute="centerX" secondItem="taX-CY-V4p" secondAttribute="centerX" id="ah2-VF-2Vo"/>
+                            <constraint firstItem="jbh-6F-Fpj" firstAttribute="centerX" secondItem="YYE-4j-ctV" secondAttribute="centerX" id="cR7-fi-0GM"/>
+                            <constraint firstItem="kie-Bv-mGV" firstAttribute="centerX" secondItem="6o6-EL-Y5c" secondAttribute="centerX" id="ejc-Nh-e5w"/>
+                            <constraint firstItem="qTp-sU-YD6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ix3-B9-kJd"/>
+                            <constraint firstItem="6o6-EL-Y5c" firstAttribute="centerX" secondItem="qTp-sU-YD6" secondAttribute="centerX" id="jZY-sO-gxc"/>
+                            <constraint firstItem="qTp-sU-YD6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="lDP-o7-FfS"/>
+                            <constraint firstItem="kie-Bv-mGV" firstAttribute="top" secondItem="Bf3-Kk-Zjj" secondAttribute="bottom" constant="8" id="oEo-Qm-fgW"/>
+                            <constraint firstItem="Lf8-qs-I4O" firstAttribute="top" secondItem="kie-Bv-mGV" secondAttribute="bottom" constant="30" id="tco-FQ-0r4"/>
+                            <constraint firstItem="Lf8-qs-I4O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xgC-U7-IEt"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="billAmountTxt" destination="6o6-EL-Y5c" id="p51-9F-31G"/>
+                        <outlet property="tipAmountLbl" destination="qTp-sU-YD6" id="eWe-Lc-geT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
