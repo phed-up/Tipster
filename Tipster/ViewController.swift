@@ -29,8 +29,15 @@ class ViewController: UIViewController {
     var fastSpeedResult = 0.0
     var neutralSpeedResult = 0.0
     var slowSpeedResult = 0.0
-    
-    
+    var amazingServiceBtnPressed = false
+    var neutralServiceBtnPressed = false
+    var rudeServiceBtnPressed = false
+    var foodDeliciousBtnPressed = false
+    var foodNeutralBtnPressed = false
+    var foodTerribleBtnPressed = false
+    var fastSpeedBtnPressed = false
+    var neutralSpeedBtnPressed = false
+    var slowSpeedBtnPressed = false
     
     
     
@@ -54,52 +61,131 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        billAmountTxt.keyboardType = UIKeyboardType.decimalPad
     }
 
     @IBAction func resetBtn(_ sender: Any) {
         billAmountTxt.text = ""
         tipAmountLbl.text = ""
         result = 0.0
+        resetBools()
     }
   
     
     @IBAction func amazingServiceBtn(sender: AnyObject) {
-        processOperation(operate: .amazingService)
+        if billAmountTxt.text != ""
+        {
+        if neutralServiceBtnPressed == false && rudeServiceBtnPressed == false && amazingServiceBtnPressed == false
+        {
+            processOperation(operate: .amazingService)
+            amazingServiceBtnPressed = true
+        }
+        }
     }
     
     @IBAction func neutralServiceBtn(sender: AnyObject) {
+        if billAmountTxt.text != ""
+        {
+        if amazingServiceBtnPressed == false && rudeServiceBtnPressed == false && neutralServiceBtnPressed == false
+        {
         processOperation(operate: .neutralService)
+        neutralServiceBtnPressed = true
+        }
+        }
     }
     
     @IBAction func rudeServiceBtn(sender: AnyObject) {
+        if billAmountTxt.text != ""
+        {
+        if amazingServiceBtnPressed == false && neutralServiceBtnPressed == false && rudeServiceBtnPressed == false
+        {
         processOperation(operate: .rudeService)
+        rudeServiceBtnPressed = true
+        }
+        }
     }
    
     @IBAction func foodDeliciousBtn(sender: AnyObject) {
+        if billAmountTxt.text != ""
+        {
+        if foodDeliciousBtnPressed == false && foodNeutralBtnPressed == false && foodTerribleBtnPressed == false
+        {
         processOperation(operate: .foodDelicious)
+        foodDeliciousBtnPressed = true
+        }
+        }
     }
     
     @IBAction func foodNeutralBtn(sender: AnyObject) {
+        if billAmountTxt.text != ""
+        {
+         if foodDeliciousBtnPressed == false && foodNeutralBtnPressed == false && foodTerribleBtnPressed == false
+         {
         processOperation(operate: .foodNeutral)
+        foodNeutralBtnPressed = true
+        }
+        }
     }
 
     @IBAction func terribleFoodBen(sender: AnyObject) {
+        if billAmountTxt.text != ""
+        {
+         if foodDeliciousBtnPressed == false && foodNeutralBtnPressed == false && foodTerribleBtnPressed == false
+         {
         processOperation(operate: .terribleFood)
+        foodTerribleBtnPressed = true
+        }
+        }
     }
     
     @IBAction func fastSpeedBtn(sender: AnyObject) {
+        if billAmountTxt.text != ""
+        {
+        if fastSpeedBtnPressed == false && neutralSpeedBtnPressed == false && slowSpeedBtnPressed == false
+        {
         processOperation(operate: .fastSpeed)
+        fastSpeedBtnPressed = true
+        }
+        }
     }
 
     @IBAction func neutralSpeedBen(sender: AnyObject) {
+        if billAmountTxt.text != ""
+        {
+        if fastSpeedBtnPressed == false && neutralSpeedBtnPressed == false && slowSpeedBtnPressed == false
+        {
         processOperation(operate: .neutralSpeed)
+        neutralSpeedBtnPressed = true
+        }
+        }
     }
 
     @IBAction func slowSpeedBtn(sender: AnyObject) {
+        if billAmountTxt.text != ""
+        {
+        if fastSpeedBtnPressed == false && neutralSpeedBtnPressed == false && slowSpeedBtnPressed == false
+        {
         processOperation(operate: .slowSpeed)
+        slowSpeedBtnPressed = true
+        }
+        }
     }
     
+    
+    
+    func resetBools()
+    {
+        amazingServiceBtnPressed = false
+        neutralServiceBtnPressed = false
+        rudeServiceBtnPressed = false
+        foodDeliciousBtnPressed = false
+        foodNeutralBtnPressed = false
+        foodTerribleBtnPressed = false
+        fastSpeedBtnPressed = false
+        neutralSpeedBtnPressed = false
+        slowSpeedBtnPressed = false
+    }
+
     
     func processOperation(operate: Equation)
         {
