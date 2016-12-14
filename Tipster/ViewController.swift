@@ -13,6 +13,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipAmountLbl: UILabel!
     @IBOutlet weak var billAmountTxt: UITextField!
     
+    @IBOutlet weak var amazingEmoji: UIImageView!
+    
+    @IBOutlet weak var neutralEmoji: UIImageView!
+    
+    @IBOutlet weak var rudeEmoji: UIImageView!
+    
     
     
     var runningNumber = ""
@@ -62,6 +68,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         billAmountTxt.keyboardType = UIKeyboardType.decimalPad
+       
     }
 
     @IBAction func resetBtn(_ sender: Any) {
@@ -69,6 +76,9 @@ class ViewController: UIViewController {
         tipAmountLbl.text = ""
         result = 0.0
         resetBools()
+        amazingEmoji.isHidden = true
+        neutralEmoji.isHidden = true
+        rudeEmoji.isHidden = true
     }
   
     
@@ -78,6 +88,7 @@ class ViewController: UIViewController {
         if neutralServiceBtnPressed == false && rudeServiceBtnPressed == false && amazingServiceBtnPressed == false
         {
             processOperation(operate: .amazingService)
+            amazingEmoji.isHidden = false
             amazingServiceBtnPressed = true
         }
         }
@@ -89,6 +100,7 @@ class ViewController: UIViewController {
         if amazingServiceBtnPressed == false && rudeServiceBtnPressed == false && neutralServiceBtnPressed == false
         {
         processOperation(operate: .neutralService)
+        neutralEmoji.isHidden = false
         neutralServiceBtnPressed = true
         }
         }
@@ -100,6 +112,7 @@ class ViewController: UIViewController {
         if amazingServiceBtnPressed == false && neutralServiceBtnPressed == false && rudeServiceBtnPressed == false
         {
         processOperation(operate: .rudeService)
+        rudeEmoji.isHidden = false
         rudeServiceBtnPressed = true
         }
         }
