@@ -12,13 +12,31 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tipAmountLbl: UILabel!
     @IBOutlet weak var billAmountTxt: UITextField!
+    @IBOutlet weak var totalAmountLbl: UILabel!
+    
+    
+    @IBOutlet weak var errorLbl: UILabel!
+    
+    @IBOutlet weak var amazingServiceBtn: UIButton!
+    @IBOutlet weak var neutralServiceBtn: UIButton!
+    @IBOutlet weak var rudeServiceBtn: UIButton!
+    @IBOutlet weak var delliciousTasteBtn: UIButton!
+    @IBOutlet weak var neutralTasteBtn: UIButton!
+    @IBOutlet weak var terribleTasteBtn: UIButton!
+    @IBOutlet weak var fastSpeedBtn: UIButton!
+    @IBOutlet weak var neutralSpeedBtn: UIButton!
+    @IBOutlet weak var slowSpeedBtn: UIButton!
+    
     
     @IBOutlet weak var amazingEmoji: UIImageView!
-    
-    @IBOutlet weak var neutralEmoji: UIImageView!
-    
+    @IBOutlet weak var neutralServiceEmoji: UIImageView!
     @IBOutlet weak var rudeEmoji: UIImageView!
-    
+    @IBOutlet weak var deliciousEmoji: UIImageView!
+    @IBOutlet weak var neutralTasteEmoji: UIImageView!
+    @IBOutlet weak var terribleEmoji: UIImageView!
+    @IBOutlet weak var fastEmoji: UIImageView!
+    @IBOutlet weak var neutralSpeedEmoji: UIImageView!
+    @IBOutlet weak var slowSpeedEmoji: UIImageView!
     
     
     var runningNumber = ""
@@ -44,6 +62,7 @@ class ViewController: UIViewController {
     var fastSpeedBtnPressed = false
     var neutralSpeedBtnPressed = false
     var slowSpeedBtnPressed = false
+    var total: Double = 0.0
     
     
     
@@ -68,6 +87,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         billAmountTxt.keyboardType = UIKeyboardType.decimalPad
+        
+      
        
     }
 
@@ -77,21 +98,55 @@ class ViewController: UIViewController {
         result = 0.0
         resetBools()
         amazingEmoji.isHidden = true
-        neutralEmoji.isHidden = true
+        neutralServiceEmoji.isHidden = true
         rudeEmoji.isHidden = true
+        deliciousEmoji.isHidden = true
+        neutralTasteEmoji.isHidden = true
+        terribleEmoji.isHidden = true
+        fastEmoji.isHidden = true
+        neutralSpeedEmoji.isHidden = true
+        slowSpeedEmoji.isHidden = true
+        amazingServiceBtn.backgroundColor = UIColor.lightGray
+        neutralServiceBtn.backgroundColor = UIColor.lightGray
+        rudeServiceBtn.backgroundColor = UIColor.lightGray
+        delliciousTasteBtn.backgroundColor = UIColor.lightGray
+        neutralTasteBtn.backgroundColor = UIColor.lightGray
+        terribleTasteBtn.backgroundColor = UIColor.lightGray
+        fastSpeedBtn.backgroundColor = UIColor.lightGray
+        neutralSpeedBtn.backgroundColor = UIColor.lightGray
+        slowSpeedBtn.backgroundColor = UIColor.lightGray
+        errorLbl.text = ""
+        
+        
     }
+    
+    
+    
   
     
     @IBAction func amazingServiceBtn(sender: AnyObject) {
         if billAmountTxt.text != ""
         {
-        if neutralServiceBtnPressed == false && rudeServiceBtnPressed == false && amazingServiceBtnPressed == false
-        {
+            if neutralServiceBtnPressed == false && rudeServiceBtnPressed == false && amazingServiceBtnPressed == false
+            {
             processOperation(operate: .amazingService)
             amazingEmoji.isHidden = false
             amazingServiceBtnPressed = true
+            amazingServiceBtn.backgroundColor = UIColor.magenta
+            errorLbl.text = ""
+            
+            }
+            else
+            {
+                errorReset()
+            }
         }
+        else
+        {
+            errorEnterBill()
         }
+        
+        
     }
     
     @IBAction func neutralServiceBtn(sender: AnyObject) {
@@ -100,9 +155,20 @@ class ViewController: UIViewController {
         if amazingServiceBtnPressed == false && rudeServiceBtnPressed == false && neutralServiceBtnPressed == false
         {
         processOperation(operate: .neutralService)
-        neutralEmoji.isHidden = false
+        neutralServiceEmoji.isHidden = false
         neutralServiceBtnPressed = true
+        neutralServiceBtn.backgroundColor = UIColor.magenta
+        errorLbl.text = ""
+        
         }
+        else
+        {
+            errorReset()
+            }
+        }
+        else
+        {
+            errorEnterBill()
         }
     }
     
@@ -114,7 +180,18 @@ class ViewController: UIViewController {
         processOperation(operate: .rudeService)
         rudeEmoji.isHidden = false
         rudeServiceBtnPressed = true
+        rudeServiceBtn.backgroundColor = UIColor.magenta
+        errorLbl.text = ""
+        
         }
+        else
+        {
+            errorReset()
+            }
+        }
+        else
+        {
+            errorEnterBill()
         }
     }
    
@@ -124,8 +201,20 @@ class ViewController: UIViewController {
         if foodDeliciousBtnPressed == false && foodNeutralBtnPressed == false && foodTerribleBtnPressed == false
         {
         processOperation(operate: .foodDelicious)
+        deliciousEmoji.isHidden = false
         foodDeliciousBtnPressed = true
+        delliciousTasteBtn.backgroundColor = UIColor.magenta
+        errorLbl.text = ""
+        
         }
+        else
+        {
+            errorReset()
+            }
+        }
+        else
+        {
+            errorEnterBill()
         }
     }
     
@@ -135,8 +224,20 @@ class ViewController: UIViewController {
          if foodDeliciousBtnPressed == false && foodNeutralBtnPressed == false && foodTerribleBtnPressed == false
          {
         processOperation(operate: .foodNeutral)
+        neutralTasteEmoji.isHidden = false
         foodNeutralBtnPressed = true
+        neutralTasteBtn.backgroundColor = UIColor.magenta
+        errorLbl.text = ""
+        
         }
+         else
+            {
+            errorReset()
+            }
+        }
+        else
+        {
+            errorEnterBill()
         }
     }
 
@@ -146,8 +247,20 @@ class ViewController: UIViewController {
          if foodDeliciousBtnPressed == false && foodNeutralBtnPressed == false && foodTerribleBtnPressed == false
          {
         processOperation(operate: .terribleFood)
+        terribleEmoji.isHidden = false
         foodTerribleBtnPressed = true
+        terribleTasteBtn.backgroundColor = UIColor.magenta
+        errorLbl.text = ""
+        
         }
+         else
+         {
+            errorReset()
+            }
+        }
+        else
+        {
+            errorEnterBill()
         }
     }
     
@@ -157,8 +270,20 @@ class ViewController: UIViewController {
         if fastSpeedBtnPressed == false && neutralSpeedBtnPressed == false && slowSpeedBtnPressed == false
         {
         processOperation(operate: .fastSpeed)
+        fastEmoji.isHidden = false
         fastSpeedBtnPressed = true
+        fastSpeedBtn.backgroundColor = UIColor.magenta
+        errorLbl.text = ""
+        
         }
+        else
+        {
+            errorReset()
+            }
+        }
+        else
+        {
+            errorEnterBill()
         }
     }
 
@@ -168,8 +293,20 @@ class ViewController: UIViewController {
         if fastSpeedBtnPressed == false && neutralSpeedBtnPressed == false && slowSpeedBtnPressed == false
         {
         processOperation(operate: .neutralSpeed)
+        neutralSpeedEmoji.isHidden = false
         neutralSpeedBtnPressed = true
+        neutralSpeedBtn.backgroundColor = UIColor.magenta
+        errorLbl.text = ""
+        
         }
+        else
+        {
+            errorReset()
+            }
+        }
+        else
+        {
+            errorEnterBill()
         }
     }
 
@@ -179,10 +316,33 @@ class ViewController: UIViewController {
         if fastSpeedBtnPressed == false && neutralSpeedBtnPressed == false && slowSpeedBtnPressed == false
         {
         processOperation(operate: .slowSpeed)
+        slowSpeedEmoji.isHidden = false
         slowSpeedBtnPressed = true
+        slowSpeedBtn.backgroundColor = UIColor.magenta
+        errorLbl.text = ""
+        
         }
+        else
+        {
+            errorReset()
+            }
+        }
+        else
+        {
+            errorEnterBill()
         }
     }
+    
+    
+    func errorReset()
+        {
+        errorLbl.text = "You must reset to make new selections"
+        }
+    
+    func errorEnterBill()
+        {
+        errorLbl.text = "Please enter a bill amount"
+        }
     
     
     
@@ -198,74 +358,103 @@ class ViewController: UIViewController {
         neutralSpeedBtnPressed = false
         slowSpeedBtnPressed = false
     }
+    
+    func totalAmt()
+    {
+        total = (Double(billAmountTxt.text!)!) + (Double(tipAmountLbl.text!)!)
+        totalAmountLbl.text = "\(String(total))"
+    }
+    
+    
 
     
     func processOperation(operate: Equation)
         {
             
             currentOperation = operate
-                
+            
                 
                 if currentOperation == Equation.amazingService
                 {
                     amazingResult = (Double(billAmountTxt.text!)! * 0.10)
                     result = result + amazingResult
-                    tipAmountLbl.text = "$\(String(result))"
+                    tipAmountLbl.text = "\(String(result))"
+                    totalAmt()
+                    
+                    
                 }
             
                 if currentOperation == Equation.neutralService
                 {
                     neutralResult = (Double(billAmountTxt.text!)! * 0.05)
                     result = result + neutralResult
-                    tipAmountLbl.text = "$\(String(result))"
+                    tipAmountLbl.text = "\(String(result))"
+                    totalAmt()
+                    
+                    
+                    
                 }
                 if currentOperation == Equation.rudeService
                 {
                     rudeResult = (Double(billAmountTxt.text!)! * 0.00)
                     result = result + rudeResult
-                    tipAmountLbl.text = "$\(String(result))"
+                    tipAmountLbl.text = "\(String(result))"
+                    totalAmt()
+                    
                 }
             
                 if currentOperation == Equation.foodDelicious
                 {
                     deliciouseResult = (Double(billAmountTxt.text!)! * 0.07)
                     result = result + deliciouseResult
-                    tipAmountLbl.text = "$\(String(result))"
+                    tipAmountLbl.text = "\(String(result))"
+                    totalAmt()
+                    
                 }
 
                 if currentOperation == Equation.foodNeutral
                 {
                     foodNeutralResult = (Double(billAmountTxt.text!)! * 0.05)
                     result = result + foodNeutralResult
-                    tipAmountLbl.text = "$\(String(result))"
+                    tipAmountLbl.text = "\(String(result))"
+                    totalAmt()
+                    
                 }
             
                 if currentOperation == Equation.terribleFood
                 {
                     terribleFoodResult = (Double(billAmountTxt.text!)! * 0.00)
                     result = result + terribleFoodResult
-                    tipAmountLbl.text = "$\(String(result))"
+                    tipAmountLbl.text = "\(String(result))"
+                    totalAmt()
+                    
                 }
             
                 if currentOperation == Equation.fastSpeed
                 {
                     fastSpeedResult = (Double(billAmountTxt.text!)! * 0.07)
                     result = result + fastSpeedResult
-                    tipAmountLbl.text = "$\(String(result))"
+                    tipAmountLbl.text = "\(String(result))"
+                    totalAmt()
+                    
                 }
             
                 if currentOperation == Equation.neutralSpeed
                 {
                     neutralResult = (Double(billAmountTxt.text!)! * 0.05)
                     result = result + neutralResult
-                    tipAmountLbl.text = "$\(String(result))"
+                    tipAmountLbl.text = "\(String(result))"
+                    totalAmt()
+                    
                 }
             
                 if currentOperation == Equation.slowSpeed
                 {
                     slowSpeedResult = (Double(billAmountTxt.text!)! * 0.0)
                     result = result + slowSpeedResult
-                    tipAmountLbl.text = "$\(String(result))"
+                    tipAmountLbl.text = "\(String(result))"
+                    totalAmt()
+                    
             }
         
             

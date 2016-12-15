@@ -21,10 +21,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IaN-RM-pR8" userLabel="background">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" cyan="1" magenta="0.46775925159999998" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hM3-WE-qIu">
+                                <rect key="frame" x="127" y="106" width="66.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.038978279769999999" blue="0.01081716026" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kie-Bv-mGV" userLabel="Service">
                                 <rect key="frame" x="50" y="120" width="80" height="123"/>
                                 <subviews>
@@ -103,7 +105,7 @@
                                     <constraint firstAttribute="height" constant="100" id="oN8-FL-fmS"/>
                                 </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Neutral_Face_Emoji" translatesAutoresizingMaskIntoConstraints="NO" id="pct-iu-G80" userLabel="Neutral Emoji">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Neutral_Face_Emoji" translatesAutoresizingMaskIntoConstraints="NO" id="pct-iu-G80" userLabel="NeutralService Emoji">
                                 <rect key="frame" x="180" y="148" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="w7S-Ne-kyZ"/>
@@ -188,11 +190,25 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hungry_Face_Emoji" translatesAutoresizingMaskIntoConstraints="NO" id="TrR-Oa-zmp" userLabel="Rude Emoji">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hungry_Face_Emoji" translatesAutoresizingMaskIntoConstraints="NO" id="TrR-Oa-zmp" userLabel="DeliciousEmoji">
                                 <rect key="frame" x="180" y="295.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="fk7-8z-qV3"/>
                                     <constraint firstAttribute="width" constant="100" id="jY3-48-8b7"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Neutral_Face_Emoji" translatesAutoresizingMaskIntoConstraints="NO" id="uwU-uw-TtU" userLabel="NeutralTaste Emoji">
+                                <rect key="frame" x="180" y="295.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="1TD-Sf-7h9"/>
+                                    <constraint firstAttribute="height" constant="100" id="JTx-tu-oCr"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poop_Emoji" translatesAutoresizingMaskIntoConstraints="NO" id="KbM-Rs-Wi2" userLabel="Terrible Emoji">
+                                <rect key="frame" x="180" y="295.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="FoZ-G3-aCu"/>
+                                    <constraint firstAttribute="height" constant="100" id="XLk-mG-Ptt"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eDC-3H-pvP" userLabel="Speed">
@@ -266,26 +282,40 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Turtle_Emoji" translatesAutoresizingMaskIntoConstraints="NO" id="7Pu-Z3-jgJ" userLabel="Rude Emoji">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rocket_Emoji" translatesAutoresizingMaskIntoConstraints="NO" id="7Pu-Z3-jgJ" userLabel="Fast Emoji">
                                 <rect key="frame" x="180" y="437.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="482-Mq-hrB"/>
                                     <constraint firstAttribute="height" constant="100" id="91t-du-WD3"/>
                                 </constraints>
                             </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Neutral_Face_Emoji" translatesAutoresizingMaskIntoConstraints="NO" id="VBx-QL-7XO" userLabel="NeutralSpeed Emoji">
+                                <rect key="frame" x="180" y="437.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="29h-Zu-Xbo"/>
+                                    <constraint firstAttribute="width" constant="100" id="Kgy-Nb-5UW"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Turtle_Emoji" translatesAutoresizingMaskIntoConstraints="NO" id="3LF-vY-Y2W" userLabel="NeutralSpeed Emoji">
+                                <rect key="frame" x="180" y="437.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="6dt-td-stT"/>
+                                    <constraint firstAttribute="width" constant="100" id="g5X-G0-MyK"/>
+                                </constraints>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2FQ-sa-7Wx" userLabel="Bill Amount">
-                                <rect key="frame" x="77" y="30" width="166" height="30"/>
+                                <rect key="frame" x="99.5" y="30" width="122.5" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwE-Tl-dUL">
-                                        <rect key="frame" x="0.0" y="0.0" width="11" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill $" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwE-Tl-dUL">
+                                        <rect key="frame" x="0.0" y="0.0" width="37.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter amount of bill" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6o6-EL-Y5c">
-                                        <rect key="frame" x="16" y="0.0" width="150" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6o6-EL-Y5c">
+                                        <rect key="frame" x="42.5" y="0.0" width="80" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="8um-H9-Ukn"/>
+                                            <constraint firstAttribute="width" constant="80" id="8um-H9-Ukn"/>
                                             <constraint firstAttribute="height" constant="30" id="Xik-t1-J0m"/>
                                         </constraints>
                                         <nil key="textColor"/>
@@ -294,18 +324,48 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Far-l6-G4c" userLabel="Tip Amount">
-                                <rect key="frame" x="93" y="70" width="150" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Far-l6-G4c" userLabel="Tip Amount and Total">
+                                <rect key="frame" x="97.5" y="70" width="274.5" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTp-sU-YD6">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip $" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BH-O0-91L" userLabel="Tip">
+                                        <rect key="frame" x="0.0" y="0.0" width="39.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTp-sU-YD6">
+                                        <rect key="frame" x="44.5" y="0.0" width="80" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="8b2-QQ-x8m"/>
-                                            <constraint firstAttribute="width" constant="150" id="S0N-cb-yfe"/>
+                                            <constraint firstAttribute="width" constant="80" id="S0N-cb-yfe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="0.1929343392" green="0.28425099879999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath=" layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total $" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbT-Q7-M3X" userLabel="Total">
+                                        <rect key="frame" x="129.5" y="0.0" width="60" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="uhd-Ua-Nlw"/>
+                                            <constraint firstAttribute="height" constant="30" id="wh9-If-yYa"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEZ-jX-goI" userLabel="Total Amount">
+                                        <rect key="frame" x="194.5" y="0.0" width="80" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="oKC-cN-McZ"/>
+                                            <constraint firstAttribute="height" constant="30" id="z76-o6-opv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="0.1929343392" green="0.28425099879999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath=" layer.cornerRadius">
@@ -315,11 +375,12 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOZ-G6-I9N">
-                                <rect key="frame" x="23" y="70" width="50" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOZ-G6-I9N">
+                                <rect key="frame" x="270" y="110" width="50" height="30"/>
                                 <color key="backgroundColor" red="0.99811891460000002" green="1" blue="0.1799496964" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="HjH-mF-LDn"/>
+                                    <constraint firstAttribute="width" constant="50" id="MQG-kP-1Cv"/>
+                                    <constraint firstAttribute="height" constant="30" id="qrr-ya-AGe"/>
                                 </constraints>
                                 <state key="normal" title="Reset">
                                     <color key="titleColor" cyan="1" magenta="0.46775925159999998" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
@@ -336,50 +397,74 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="3LF-vY-Y2W" firstAttribute="centerX" secondItem="7Pu-Z3-jgJ" secondAttribute="centerX" id="2kL-MO-ddQ"/>
                             <constraint firstItem="2FQ-sa-7Wx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3n3-c8-f39"/>
+                            <constraint firstItem="Far-l6-G4c" firstAttribute="top" secondItem="2FQ-sa-7Wx" secondAttribute="bottom" constant="10" id="4YK-ZB-fii"/>
                             <constraint firstItem="Far-l6-G4c" firstAttribute="top" secondItem="2FQ-sa-7Wx" secondAttribute="bottom" constant="10" id="8q0-py-gmQ"/>
+                            <constraint firstItem="qTp-sU-YD6" firstAttribute="leading" secondItem="6o6-EL-Y5c" secondAttribute="leading" id="9OD-Hb-Gzz"/>
+                            <constraint firstItem="uwU-uw-TtU" firstAttribute="centerY" secondItem="TrR-Oa-zmp" secondAttribute="centerY" id="AlB-U9-Ci9"/>
                             <constraint firstItem="BN1-M1-4Ji" firstAttribute="centerX" secondItem="kie-Bv-mGV" secondAttribute="centerX" id="D9z-dR-d89"/>
                             <constraint firstItem="eDC-3H-pvP" firstAttribute="top" secondItem="BN1-M1-4Ji" secondAttribute="bottom" constant="20" id="GIf-gU-Jrk"/>
                             <constraint firstItem="pct-iu-G80" firstAttribute="centerY" secondItem="UNK-0e-cIr" secondAttribute="centerY" id="Ga9-FA-wbr"/>
+                            <constraint firstItem="VBx-QL-7XO" firstAttribute="centerY" secondItem="7Pu-Z3-jgJ" secondAttribute="centerY" id="Ij9-no-Oog"/>
                             <constraint firstItem="GW5-gs-kAC" firstAttribute="centerY" secondItem="UNK-0e-cIr" secondAttribute="centerY" id="KFH-Ex-S4H"/>
-                            <constraint firstItem="aOZ-G6-I9N" firstAttribute="centerY" secondItem="qTp-sU-YD6" secondAttribute="centerY" id="Ozt-Sj-8Nj"/>
+                            <constraint firstItem="3LF-vY-Y2W" firstAttribute="centerY" secondItem="7Pu-Z3-jgJ" secondAttribute="centerY" id="Nbx-d3-TKz"/>
+                            <constraint firstItem="VBx-QL-7XO" firstAttribute="centerX" secondItem="7Pu-Z3-jgJ" secondAttribute="centerX" id="OhD-7v-HI2"/>
                             <constraint firstItem="UNK-0e-cIr" firstAttribute="centerX" secondItem="2FQ-sa-7Wx" secondAttribute="centerX" constant="70" id="Rrx-id-NJR"/>
                             <constraint firstItem="TrR-Oa-zmp" firstAttribute="centerY" secondItem="0zj-u3-Z2L" secondAttribute="centerY" id="VkN-c3-DYK"/>
                             <constraint firstItem="2FQ-sa-7Wx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="XGn-7e-1zJ"/>
                             <constraint firstItem="kie-Bv-mGV" firstAttribute="centerX" secondItem="2FQ-sa-7Wx" secondAttribute="centerX" constant="-70" id="XjH-kr-y3f"/>
+                            <constraint firstItem="KbM-Rs-Wi2" firstAttribute="centerY" secondItem="TrR-Oa-zmp" secondAttribute="centerY" id="YP0-uZ-iAa"/>
+                            <constraint firstItem="hM3-WE-qIu" firstAttribute="top" secondItem="Far-l6-G4c" secondAttribute="bottom" constant="6" id="a9Z-ia-Rn2"/>
+                            <constraint firstItem="hM3-WE-qIu" firstAttribute="centerX" secondItem="2FQ-sa-7Wx" secondAttribute="centerX" id="fBT-5F-xn9"/>
                             <constraint firstItem="pct-iu-G80" firstAttribute="centerX" secondItem="UNK-0e-cIr" secondAttribute="centerX" id="g4D-ir-hUb"/>
                             <constraint firstItem="eDC-3H-pvP" firstAttribute="centerX" secondItem="kie-Bv-mGV" secondAttribute="centerX" id="gBF-sA-Z5P"/>
                             <constraint firstItem="TrR-Oa-zmp" firstAttribute="centerX" secondItem="UNK-0e-cIr" secondAttribute="centerX" id="hlr-Jg-ELe"/>
                             <constraint firstItem="UNK-0e-cIr" firstAttribute="centerY" secondItem="JJL-16-v6m" secondAttribute="centerY" id="kI6-NM-OPs"/>
                             <constraint firstItem="7Pu-Z3-jgJ" firstAttribute="centerY" secondItem="c8o-0x-rSq" secondAttribute="centerY" id="kXv-aY-qzy"/>
-                            <constraint firstItem="IaN-RM-pR8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="oYP-PE-Jea"/>
+                            <constraint firstItem="KbM-Rs-Wi2" firstAttribute="centerX" secondItem="TrR-Oa-zmp" secondAttribute="centerX" id="lSn-xD-Xx8"/>
+                            <constraint firstItem="uwU-uw-TtU" firstAttribute="centerX" secondItem="TrR-Oa-zmp" secondAttribute="centerX" id="nbf-oe-gcp"/>
                             <constraint firstItem="kie-Bv-mGV" firstAttribute="top" secondItem="Far-l6-G4c" secondAttribute="bottom" constant="20" id="pvR-f2-LB8"/>
                             <constraint firstItem="GW5-gs-kAC" firstAttribute="centerX" secondItem="UNK-0e-cIr" secondAttribute="centerX" id="qlI-9c-EmM"/>
                             <constraint firstItem="BN1-M1-4Ji" firstAttribute="top" secondItem="GW5-gs-kAC" secondAttribute="bottom" constant="20" id="sm2-SB-b3V"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IaN-RM-pR8" secondAttribute="bottom" id="uOM-Oq-NhW"/>
-                            <constraint firstItem="IaN-RM-pR8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vZZ-Mh-Mzi"/>
-                            <constraint firstItem="Far-l6-G4c" firstAttribute="leading" secondItem="aOZ-G6-I9N" secondAttribute="trailing" constant="20" id="x2S-0q-dH8"/>
-                            <constraint firstAttribute="trailing" secondItem="IaN-RM-pR8" secondAttribute="trailing" id="xAh-N2-e09"/>
-                            <constraint firstItem="Far-l6-G4c" firstAttribute="centerX" secondItem="6o6-EL-Y5c" secondAttribute="centerX" id="zux-Ex-R6T"/>
                             <constraint firstItem="7Pu-Z3-jgJ" firstAttribute="centerX" secondItem="UNK-0e-cIr" secondAttribute="centerX" id="zy0-gG-UQU"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="amazingEmoji" destination="UNK-0e-cIr" id="QS2-P3-PkO"/>
+                        <outlet property="amazingServiceBtn" destination="Cgj-P0-0kD" id="hu7-KQ-1mB"/>
                         <outlet property="billAmountTxt" destination="6o6-EL-Y5c" id="p51-9F-31G"/>
-                        <outlet property="neutralEmoji" destination="pct-iu-G80" id="evd-MB-yeo"/>
+                        <outlet property="deliciousEmoji" destination="TrR-Oa-zmp" id="JE6-t5-86C"/>
+                        <outlet property="delliciousTasteBtn" destination="RI8-Su-9kw" id="3lA-ZG-KEL"/>
+                        <outlet property="errorLbl" destination="hM3-WE-qIu" id="6Y7-gd-dxd"/>
+                        <outlet property="fastEmoji" destination="7Pu-Z3-jgJ" id="0j9-IC-PuG"/>
+                        <outlet property="fastSpeedBtn" destination="YYE-4j-ctV" id="IiJ-lM-YeI"/>
+                        <outlet property="neutralServiceBtn" destination="JJL-16-v6m" id="h8q-Nh-Fc6"/>
+                        <outlet property="neutralServiceEmoji" destination="pct-iu-G80" id="XEj-8A-4Sm"/>
+                        <outlet property="neutralSpeedBtn" destination="c8o-0x-rSq" id="chr-uJ-fhl"/>
+                        <outlet property="neutralSpeedEmoji" destination="VBx-QL-7XO" id="Aj6-Xv-HvT"/>
+                        <outlet property="neutralTasteBtn" destination="0zj-u3-Z2L" id="3s8-w1-qhg"/>
+                        <outlet property="neutralTasteEmoji" destination="uwU-uw-TtU" id="OiH-Fn-evj"/>
                         <outlet property="rudeEmoji" destination="GW5-gs-kAC" id="drz-y6-NFd"/>
+                        <outlet property="rudeServiceBtn" destination="taX-CY-V4p" id="3TD-4n-pYz"/>
+                        <outlet property="slowSpeedBtn" destination="JIb-qY-C1g" id="gRV-Pa-LGW"/>
+                        <outlet property="slowSpeedEmoji" destination="3LF-vY-Y2W" id="3c7-L5-dSa"/>
+                        <outlet property="terribleEmoji" destination="KbM-Rs-Wi2" id="b8d-08-ITa"/>
+                        <outlet property="terribleTasteBtn" destination="Sz5-Wu-KvB" id="zte-DC-lsJ"/>
                         <outlet property="tipAmountLbl" destination="qTp-sU-YD6" id="eWe-Lc-geT"/>
+                        <outlet property="totalAmountLbl" destination="tEZ-jX-goI" id="Yw1-Aj-chD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="138.38028169014083"/>
+            <point key="canvasLocation" x="135" y="107"/>
         </scene>
     </scenes>
     <resources>
         <image name="Hungry_Face_Emoji" width="640" height="640"/>
         <image name="Neutral_Face_Emoji" width="640" height="640"/>
+        <image name="Poop_Emoji" width="640" height="640"/>
+        <image name="Rocket_Emoji" width="640" height="640"/>
         <image name="Smiling_Emoji_with_Eyes_Opened" width="640" height="640"/>
         <image name="Turtle_Emoji" width="640" height="640"/>
         <image name="Very_Angry_Emoji" width="640" height="640"/>
