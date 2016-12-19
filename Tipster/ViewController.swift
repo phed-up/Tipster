@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipAmountLbl: UILabel!
     @IBOutlet weak var billAmountTxt: UITextField!
     @IBOutlet weak var totalAmountLbl: UILabel!
+    @IBOutlet weak var splitAmount: UITextField!
+    @IBOutlet weak var eachAmount: UILabel!
     
     
     @IBOutlet weak var errorLbl: UILabel!
@@ -63,6 +65,7 @@ class ViewController: UIViewController {
     var neutralSpeedBtnPressed = false
     var slowSpeedBtnPressed = false
     var total: Double = 0.0
+    var split: Double = 0.0
     
     
     
@@ -88,13 +91,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         billAmountTxt.keyboardType = UIKeyboardType.decimalPad
         
-      
        
     }
 
     @IBAction func resetBtn(_ sender: Any) {
         billAmountTxt.text = ""
         tipAmountLbl.text = ""
+        totalAmountLbl.text = ""
+        splitAmount.text = "1"
+        eachAmount.text = ""
         result = 0.0
         resetBools()
         amazingEmoji.isHidden = true
@@ -361,8 +366,13 @@ class ViewController: UIViewController {
     
     func totalAmt()
     {
+        
+        
         total = (Double(billAmountTxt.text!)!) + (Double(tipAmountLbl.text!)!)
         totalAmountLbl.text = "\(String(total))"
+        eachAmount.text = "\(String(total / (Double(splitAmount.text!)!)))"
+        
+       
     }
     
     
