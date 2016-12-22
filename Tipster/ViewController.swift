@@ -369,8 +369,10 @@ class ViewController: UIViewController {
         
         
         total = (Double(billAmountTxt.text!)!) + (Double(tipAmountLbl.text!)!)
-        totalAmountLbl.text = "\(String(total))"
-        eachAmount.text = "\(String(total / (Double(splitAmount.text!)!)))"
+        //totalAmountLbl.text = "\(String(total))"
+        totalAmountLbl.text = String(format: "%.2f", total)
+        //eachAmount.text = "\(String(total / (Double(splitAmount.text!)!)))"
+        eachAmount.text = String(format: "%.2f", (total) / (Double(splitAmount.text!)!))
         
        
     }
@@ -388,7 +390,8 @@ class ViewController: UIViewController {
                 {
                     amazingResult = (Double(billAmountTxt.text!)! * 0.10)
                     result = result + amazingResult
-                    tipAmountLbl.text = "\(String(result))"
+                    //tipAmountLbl.text = "\(String(result))"
+                    tipAmountLbl.text = String(format: "%.2f", result)
                     totalAmt()
                     
                     
@@ -398,7 +401,7 @@ class ViewController: UIViewController {
                 {
                     neutralResult = (Double(billAmountTxt.text!)! * 0.05)
                     result = result + neutralResult
-                    tipAmountLbl.text = "\(String(result))"
+                    tipAmountLbl.text = String(format: "%.2f", result)
                     totalAmt()
                     
                     
@@ -408,7 +411,7 @@ class ViewController: UIViewController {
                 {
                     rudeResult = (Double(billAmountTxt.text!)! * 0.00)
                     result = result + rudeResult
-                    tipAmountLbl.text = "\(String(result))"
+                    tipAmountLbl.text = String(format: "%.2f", result)
                     totalAmt()
                     
                 }
@@ -417,7 +420,7 @@ class ViewController: UIViewController {
                 {
                     deliciouseResult = (Double(billAmountTxt.text!)! * 0.07)
                     result = result + deliciouseResult
-                    tipAmountLbl.text = "\(String(result))"
+                    tipAmountLbl.text = String(format: "%.2f", result)
                     totalAmt()
                     
                 }
@@ -426,7 +429,7 @@ class ViewController: UIViewController {
                 {
                     foodNeutralResult = (Double(billAmountTxt.text!)! * 0.05)
                     result = result + foodNeutralResult
-                    tipAmountLbl.text = "\(String(result))"
+                    tipAmountLbl.text = String(format: "%.2f", result)
                     totalAmt()
                     
                 }
@@ -435,7 +438,7 @@ class ViewController: UIViewController {
                 {
                     terribleFoodResult = (Double(billAmountTxt.text!)! * 0.00)
                     result = result + terribleFoodResult
-                    tipAmountLbl.text = "\(String(result))"
+                    tipAmountLbl.text = String(format: "%.2f", result)
                     totalAmt()
                     
                 }
@@ -444,7 +447,7 @@ class ViewController: UIViewController {
                 {
                     fastSpeedResult = (Double(billAmountTxt.text!)! * 0.07)
                     result = result + fastSpeedResult
-                    tipAmountLbl.text = "\(String(result))"
+                    tipAmountLbl.text = String(format: "%.2f", result)
                     totalAmt()
                     
                 }
@@ -453,7 +456,7 @@ class ViewController: UIViewController {
                 {
                     neutralResult = (Double(billAmountTxt.text!)! * 0.05)
                     result = result + neutralResult
-                    tipAmountLbl.text = "\(String(result))"
+                    tipAmountLbl.text = String(format: "%.2f", result)
                     totalAmt()
                     
                 }
@@ -462,7 +465,7 @@ class ViewController: UIViewController {
                 {
                     slowSpeedResult = (Double(billAmountTxt.text!)! * 0.0)
                     result = result + slowSpeedResult
-                    tipAmountLbl.text = "\(String(result))"
+                    tipAmountLbl.text = String(format: "%.2f", result)
                     totalAmt()
                     
             }
