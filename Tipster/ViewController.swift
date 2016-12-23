@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var tipAmountLbl: UILabel!
     @IBOutlet weak var billAmountTxt: UITextField!
@@ -87,12 +87,34 @@ class ViewController: UIViewController {
     
     
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        billAmountTxt.keyboardType = UIKeyboardType.decimalPad
         
-       
+        self.billAmountTxt.delegate = self
+        self.splitAmount.delegate = self
+        
+        billAmountTxt.keyboardType = UIKeyboardType.decimalPad
+        splitAmount.keyboardType = UIKeyboardType.numberPad
+        
     }
+    
+    override func didReceiveMemoryWarning()
+    {
+        super.didReceiveMemoryWarning()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        billAmountTxt.resignFirstResponder()
+        splitAmount.resignFirstResponder()
+        return (true)
+    }
+    
 
     @IBAction func resetBtn(_ sender: Any) {
         billAmountTxt.text = ""
