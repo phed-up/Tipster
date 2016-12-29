@@ -189,8 +189,8 @@
                                             <constraint firstAttribute="height" constant="25" id="1SH-Xt-0uX"/>
                                             <constraint firstAttribute="width" constant="80" id="epz-k4-nMa"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Amazing">
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <state key="normal" title="Outstanding">
                                             <color key="titleColor" cyan="1" magenta="0.46775925159999998" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -210,7 +210,7 @@
                                             <constraint firstAttribute="width" constant="80" id="ge0-5v-jat"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Neutral">
+                                        <state key="normal" title="Pleasant">
                                             <color key="titleColor" cyan="1" magenta="0.46775925159999998" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -230,7 +230,7 @@
                                             <constraint firstAttribute="width" constant="80" id="Oxm-Sr-NXT"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Rude">
+                                        <state key="normal" title="Bitchy">
                                             <color key="titleColor" cyan="1" magenta="0.46775925159999998" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -281,8 +281,8 @@
                                             <constraint firstAttribute="width" constant="80" id="8PP-Bp-LFg"/>
                                             <constraint firstAttribute="height" constant="25" id="FBN-qp-sQ9"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                        <state key="normal" title="Delicious">
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Yummy">
                                             <color key="titleColor" cyan="1" magenta="0.46775925159999998" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -322,7 +322,7 @@
                                             <constraint firstAttribute="width" constant="80" id="ykg-ig-67G"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Terrible">
+                                        <state key="normal" title="Blech">
                                             <color key="titleColor" cyan="1" magenta="0.46775925159999998" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -374,7 +374,7 @@
                                             <constraint firstAttribute="width" constant="80" id="qiQ-Aj-pD5"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Fast">
+                                        <state key="normal" title="Speedy">
                                             <color key="titleColor" cyan="1" magenta="0.46775925159999998" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -394,7 +394,7 @@
                                             <constraint firstAttribute="width" constant="80" id="EMP-ha-feJ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Neutral">
+                                        <state key="normal" title="Robot">
                                             <color key="titleColor" cyan="1" magenta="0.46775925159999998" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -414,7 +414,7 @@
                                             <constraint firstAttribute="height" constant="25" id="mTq-fT-BnG"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Slow">
+                                        <state key="normal" title="Turtle">
                                             <color key="titleColor" cyan="1" magenta="0.46775925159999998" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
