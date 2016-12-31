@@ -4,7 +4,7 @@
 //
 //  Created by skwong on 12/7/16.
 //  Copyright © 2016 fedup. All rights reserved.
-//
+// had to call it Tipster 888 because Tipster is already taken dang it!
 
 import UIKit
 
