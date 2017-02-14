@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,13 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="00L-3z-8Oo">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="568" id="ELa-ox-vko"/>
-                                    <constraint firstAttribute="width" constant="320" id="qRm-aB-Ra1"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOZ-G6-I9N">
                                 <rect key="frame" x="120" y="20" width="80" height="30"/>
                                 <color key="backgroundColor" red="0.99811891460000002" green="1" blue="0.1799496964" alpha="1" colorSpace="calibratedRGB"/>
@@ -168,26 +161,26 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hM3-WE-qIu">
-                                <rect key="frame" x="160.5" y="170" width="0.0" height="0.0"/>
+                                <rect key="frame" x="160" y="170" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <color key="textColor" red="1" green="0.038978279769999999" blue="0.01081716026" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kie-Bv-mGV" userLabel="Service">
-                                <rect key="frame" x="55" y="185" width="80" height="114"/>
+                                <rect key="frame" x="45" y="185" width="100" height="114"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bf3-Kk-Zjj">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" red="0.99811891460000002" green="1" blue="0.1799496964" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cgj-P0-0kD">
-                                        <rect key="frame" x="0.0" y="29" width="80" height="25"/>
+                                        <rect key="frame" x="0.0" y="29" width="100" height="25"/>
                                         <color key="backgroundColor" white="0.57039114930000001" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="1SH-Xt-0uX"/>
-                                            <constraint firstAttribute="width" constant="80" id="epz-k4-nMa"/>
+                                            <constraint firstAttribute="width" constant="100" id="epz-k4-nMa"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                         <state key="normal" title="Outstanding">
@@ -203,11 +196,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJL-16-v6m">
-                                        <rect key="frame" x="0.0" y="59" width="80" height="25"/>
+                                        <rect key="frame" x="0.0" y="59" width="100" height="25"/>
                                         <color key="backgroundColor" white="0.57039114930000001" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="WvJ-HM-z9L"/>
-                                            <constraint firstAttribute="width" constant="80" id="ge0-5v-jat"/>
+                                            <constraint firstAttribute="width" constant="100" id="ge0-5v-jat"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Pleasant">
@@ -223,11 +216,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taX-CY-V4p">
-                                        <rect key="frame" x="0.0" y="89" width="80" height="25"/>
+                                        <rect key="frame" x="0.0" y="89" width="100" height="25"/>
                                         <color key="backgroundColor" white="0.57039114930000001" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="9wg-Hd-Zq1"/>
-                                            <constraint firstAttribute="width" constant="80" id="Oxm-Sr-NXT"/>
+                                            <constraint firstAttribute="width" constant="100" id="Oxm-Sr-NXT"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Bitchy">
@@ -266,19 +259,19 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BN1-M1-4Ji" userLabel="Taste">
-                                <rect key="frame" x="55" y="309" width="80" height="114"/>
+                                <rect key="frame" x="45" y="309" width="100" height="114"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taste" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lf8-qs-I4O" userLabel="taste">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" red="0.99811891460000002" green="1" blue="0.1799496964" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RI8-Su-9kw">
-                                        <rect key="frame" x="0.0" y="29" width="80" height="25"/>
+                                        <rect key="frame" x="0.0" y="29" width="100" height="25"/>
                                         <color key="backgroundColor" white="0.57039114930000001" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="8PP-Bp-LFg"/>
+                                            <constraint firstAttribute="width" constant="100" id="8PP-Bp-LFg"/>
                                             <constraint firstAttribute="height" constant="25" id="FBN-qp-sQ9"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -295,10 +288,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zj-u3-Z2L">
-                                        <rect key="frame" x="0.0" y="59" width="80" height="25"/>
+                                        <rect key="frame" x="0.0" y="59" width="100" height="25"/>
                                         <color key="backgroundColor" white="0.57039114930000001" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="fQa-hK-Que"/>
+                                            <constraint firstAttribute="width" constant="100" id="fQa-hK-Que"/>
                                             <constraint firstAttribute="height" constant="25" id="mfB-UI-EUo"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -315,11 +308,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sz5-Wu-KvB">
-                                        <rect key="frame" x="0.0" y="89" width="80" height="25"/>
+                                        <rect key="frame" x="0.0" y="89" width="100" height="25"/>
                                         <color key="backgroundColor" white="0.57039114930000001" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="f3D-fr-lvP"/>
-                                            <constraint firstAttribute="width" constant="80" id="ykg-ig-67G"/>
+                                            <constraint firstAttribute="width" constant="100" id="ykg-ig-67G"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Blech">
@@ -357,24 +350,24 @@
                                     <constraint firstAttribute="height" constant="50" id="XLk-mG-Ptt"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eDC-3H-pvP" userLabel="Speed">
-                                <rect key="frame" x="55" y="433" width="80" height="113"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eDC-3H-pvP" userLabel="Ambiance">
+                                <rect key="frame" x="45" y="433" width="100" height="114"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbh-6F-Fpj">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="23"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ambiance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbh-6F-Fpj">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="24"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" red="0.99811891460000002" green="1" blue="0.1799496964" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYE-4j-ctV">
-                                        <rect key="frame" x="0.0" y="28" width="80" height="25"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYE-4j-ctV" userLabel="Luxurious Btn">
+                                        <rect key="frame" x="0.0" y="29" width="100" height="25"/>
                                         <color key="backgroundColor" white="0.57039114930000001" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="pbK-3e-NUE"/>
-                                            <constraint firstAttribute="width" constant="80" id="qiQ-Aj-pD5"/>
+                                            <constraint firstAttribute="width" constant="100" id="qiQ-Aj-pD5"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Speedy">
+                                        <state key="normal" title="Luxurious">
                                             <color key="titleColor" cyan="1" magenta="0.46775925159999998" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -386,15 +379,15 @@
                                             <action selector="fastSpeedBtnWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UHp-sO-ZCr"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8o-0x-rSq">
-                                        <rect key="frame" x="0.0" y="58" width="80" height="25"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8o-0x-rSq" userLabel="Relaxed Btn">
+                                        <rect key="frame" x="0.0" y="59" width="100" height="25"/>
                                         <color key="backgroundColor" white="0.57039114930000001" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="Daa-Ur-8c0"/>
-                                            <constraint firstAttribute="width" constant="80" id="EMP-ha-feJ"/>
+                                            <constraint firstAttribute="width" constant="100" id="EMP-ha-feJ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Robot">
+                                        <state key="normal" title="Relaxed">
                                             <color key="titleColor" cyan="1" magenta="0.46775925159999998" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -406,15 +399,15 @@
                                             <action selector="neutralSpeedBenWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F4l-cU-Yj8"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIb-qY-C1g">
-                                        <rect key="frame" x="0.0" y="88" width="80" height="25"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIb-qY-C1g" userLabel="Nasty Btn">
+                                        <rect key="frame" x="0.0" y="89" width="100" height="25"/>
                                         <color key="backgroundColor" white="0.57039114930000001" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="k3f-rK-rSP"/>
+                                            <constraint firstAttribute="width" constant="100" id="k3f-rK-rSP"/>
                                             <constraint firstAttribute="height" constant="25" id="mTq-fT-BnG"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Turtle">
+                                        <state key="normal" title="Nasty">
                                             <color key="titleColor" cyan="1" magenta="0.46775925159999998" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -428,25 +421,32 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rocket_Emoji" translatesAutoresizingMaskIntoConstraints="NO" id="7Pu-Z3-jgJ" userLabel="Fast Emoji">
-                                <rect key="frame" x="185" y="478.5" width="50" height="50"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart_Eyes_Emoji" translatesAutoresizingMaskIntoConstraints="NO" id="7Pu-Z3-jgJ" userLabel="Luxurious Emoji">
+                                <rect key="frame" x="185" y="479.5" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="482-Mq-hrB"/>
                                     <constraint firstAttribute="height" constant="50" id="91t-du-WD3"/>
                                 </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Turtle_Emoji" translatesAutoresizingMaskIntoConstraints="NO" id="3LF-vY-Y2W" userLabel="SlowSpeed Emoji">
-                                <rect key="frame" x="185" y="478.5" width="50" height="50"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Toilet" translatesAutoresizingMaskIntoConstraints="NO" id="3LF-vY-Y2W" userLabel="Nasty Emoji">
+                                <rect key="frame" x="185" y="479.5" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6dt-td-stT"/>
                                     <constraint firstAttribute="width" constant="50" id="g5X-G0-MyK"/>
                                 </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Neutral_Face_Emoji" translatesAutoresizingMaskIntoConstraints="NO" id="VBx-QL-7XO" userLabel="NeutralSpeed Emoji">
-                                <rect key="frame" x="185" y="478.5" width="50" height="50"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Neutral_Face_Emoji" translatesAutoresizingMaskIntoConstraints="NO" id="VBx-QL-7XO" userLabel="Relaxed Emoji">
+                                <rect key="frame" x="185" y="479.5" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="29h-Zu-Xbo"/>
                                     <constraint firstAttribute="width" constant="50" id="Kgy-Nb-5UW"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="BackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="00L-3z-8Oo">
+                                <rect key="frame" x="33" y="0.0" width="320" height="568"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="568" id="ELa-ox-vko"/>
+                                    <constraint firstAttribute="width" constant="320" id="qRm-aB-Ra1"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -541,12 +541,12 @@
     </scenes>
     <resources>
         <image name="BackgroundImage" width="320" height="480"/>
+        <image name="Heart_Eyes_Emoji" width="640" height="640"/>
         <image name="Hungry_Face_Emoji" width="640" height="640"/>
         <image name="Neutral_Face_Emoji" width="640" height="640"/>
         <image name="Poop_Emoji" width="640" height="640"/>
-        <image name="Rocket_Emoji" width="640" height="640"/>
         <image name="Smiling_Emoji_with_Eyes_Opened" width="640" height="640"/>
-        <image name="Turtle_Emoji" width="640" height="640"/>
+        <image name="Toilet" width="160" height="160"/>
         <image name="Very_Angry_Emoji" width="640" height="640"/>
     </resources>
 </document>
